@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-family: '微軟正黑體';
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      background: url('./bg-full.jpg');
+    }
+    h1{
+      font-size: 2.5rem;  
+    }
+    p{
+      font-size: 1.25rem;
+    }
+    #container {
+      width: 80%;
+      height: 80%;
+      border: 1px solid #ccc;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      display: flex;
+      flex: 1;
+      flex-flow: column wrap;
+      box-sizing: border-box;
+    }
+
+    .buy {
+      width: 50%;
+      height: 100%;
+      background: url('./main.jpg') no-repeat;
+      background-size: 100% 100%;
+      display: flex;
+      flex-flow: column;
+      justify-content: flex-end;
+      align-items: center;
+      position: relative;
+      text-align: center;
+      color: white;
+
+    }
+
+    #ff7 {
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 25%;
+      height: 45%;
+
+    }
+    .buy #info{
+      width: 100%;
+      height: 40%;
+      padding: 0 3rem;
+    }
+    .buy h1 {
+      width: 100%;
+    }
+
+    .buy p {
+      width: 80%;
+      padding: 0 5rem 0 5rem ;
+      /* padding: 0 3rem; */
+      
+    }
+
+    .cloud {
+      width: 50%;
+      height: 50%;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      background: gray url('./cloud.png') no-repeat;
+      background-size: 40% 90%;
+      background-position: 100% 100%;
+
+    }
+
+
+    .cloud h1 {
+      width: 60%;
+      margin-top: 100px;
+      margin-left: 50px;
+    }
+
+    .cloud p {
+      width: 60%;
+      margin-left: 50px;
+      flex: 1;
+    }
+
+
+
+    .tifa {
+      width: 50%;
+      height: 50%;
+      color: #fff;
+      display: flex;
+      flex-flow: column wrap;
+      align-items: flex-end;
+      background: #000 url('./tifa.png') no-repeat;
+      background-size: 40% 90%;
+      background-position: 0 100%;
+    }
+
+
+    .tifa h1 {
+      width: 60%;
+      height: 40%;
+      line-height: 250px;
+      margin-right: 40px;
+    }
+
+    .tifa p {
+      width: 60%;
+      margin-right: 40px;
+      flex: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div class="buy">
+      <img src="./ps4-ff7.png" id="ff7">
+
+      <div id="info">
+        <h1>AVAILABLE NOW</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti provident atque error fugit suscipit
+          dolorem
+          consectetur facere non modi maxime, voluptatem assumenda incidunt ipsum veniam cumque doloremque laudantium,
+          rerum dicta.
+        </p>
+      </div>
+
+
+    </div>
+    <div class="cloud">
+      <h1>Cloud</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti provident atque error fugit suscipit dolorem
+        consectetur facere non modi maxime, voluptatem assumenda incidunt ipsum veniam cumque doloremque laudantium,
+        rerum dicta.
+      </p>
+    </div>
+    <div class="tifa">
+      <h1>Tifa</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti provident atque error fugit suscipit dolorem
+        consectetur facere non modi maxime, voluptatem assumenda incidunt ipsum veniam cumque doloremque laudantium,
+        rerum dicta.
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

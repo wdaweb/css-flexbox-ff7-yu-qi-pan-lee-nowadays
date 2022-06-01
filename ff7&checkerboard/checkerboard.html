@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      box-sizing: border-box;
+      font-family: '微軟正黑體';
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    #checkerboard {
+      width: 1000px;
+      height: 900px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      /* border: 1px solid #000; */
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .container {
+      width: 800px;
+      height: 750px;
+      margin: 5px;
+      border: 1px solid #000;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-content: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      writing-mode: vertical-lr;
+    }
+
+    .row {
+      width: 602px;
+      height: 75px;
+      border: 1px solid #000;
+      list-style: none;
+      display: flex;
+      position: relative;
+    }
+
+    .col {
+      width: 75px;
+      height: 75px;
+      border: 1px solid #000;
+      font-size: 2rem;
+    }
+
+    .check {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      border: 1px solid #000;
+      text-align: center;
+      background: #fff;
+      line-height: 45px;
+    }
+
+    .check1 {
+      margin-top: -20px;
+      margin-left: -25px;
+      position: absolute;
+      z-index: 1000;
+    }
+
+    .check1r {
+      margin-top: -20px;
+      margin-left: 50px;
+      position: absolute;
+      z-index: 1000;
+    }
+
+    .check2 {
+      margin-top: 50px;
+      margin-left: -25px;
+      position: absolute;
+      z-index: 1000;
+      color: #f00;
+    }
+
+    .check2r {
+      margin-top: 50px;
+      margin-left: 50px;
+      position: absolute;
+      z-index: 1000;
+      color: #f00;
+
+    }
+
+
+    .line1 {
+      width: 210px;
+      height: 1px;
+      background: #000;
+      margin-top: 75px;
+      margin-left: -30px;
+      transform: rotate(45deg);
+      position: absolute;
+      z-index: -1000;
+    }
+
+    .line2 {
+      width: 210px;
+      height: 1px;
+      background: #000;
+      margin-top: 75px;
+      margin-left: -180px;
+      transform: rotate(-45deg);
+      position: absolute;
+      z-index: -1000;
+    }
+
+    .river {
+      width: 600px;
+      height: 75px;
+      border: 1px solid #000;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      font-size: 3rem;
+    }
+  </style>
+</head>
+
+<body>
+  
+  <div id="checkerboard">
+    <h1>棋盤裡，車無輪，馬無韁，叫聲將軍提防提防</h1>
+    <div class="container">
+      <ul class="row">
+        <li class="col">
+          <div class="check check1">車</div>
+        </li>
+        <li class="col">
+          <div class="check check1">馬</div>
+        </li>
+        <li class="col">
+          <div class="check check1">象</div>
+        </li>
+        <li class="col">
+          <div class="check check1">士</div>
+          <div class="line1"></div>
+        </li>
+        <li class="col">
+          <div class="check check1">將</div>
+        </li>
+        <li class="col">
+          <div class="check check1">士</div>
+          <div class="line2"></div>
+        </li>
+        <li class="col">
+          <div class="check check1">象</div>
+        </li>
+        <li class="col">
+          <div class="check check1">馬</div>
+          <div class="check check1r">車</div>
+        </li>
+      </ul>
+      <ul class="row">
+        <li class="col"></li>
+        <li class="col"></li>
+        <li class="col"></li>
+        <li class="col"></li>
+        <li class="col"></li>
+        <li class="col"></li>
+        <li class="col"></li>
+        <li class="col"></li>
+      </ul>
+      <ul class="row">
+        <li class="col"></li>
+        <li class="col">
+          <div class="check check1">包</div>
+        </li>
+        <li class="col"></li>
+        <li class="col"></li>
+        <li class="col"></li>
+        <li class="col"></li>
+        <li class="col"></li>
+        <li class="col">
+          <div class="check check1">包</div>
+        </li>
+      </ul>
+      <ul class="row">
+        <li class="col">
+          <div class="check check1">卒</div>
+        </li>
+        <li class="col"></li>
+        <li class="col">
+          <div class="check check1">卒</div>
+        </li>
+        <li class="col"></li>
+        <li class="col">
+          <div class="check check1">卒</div>
+        </li>
+        <li class="col"></li>
+        <li class="col">
+          <div class="check check1">卒</div>
+        </li>
+        <li class="col">
+          <div class="check check1r">卒</div>
+        </li>
+      </ul>
+      <ul class="row">
+        <li class="river">
+          <div>楚河</div>
+          <div>漢界</div>
+        </li>
+      </ul>
+      <ul class="row">
+        <li class="col">
+          <div class="check check2">兵</div>
+        </li>
+        <li class="col"></li>
+        <li class="col">
+          <div class="check check2">兵</div>
+        </li>
+        <li class="col"></li>
+        <li class="col">
+          <div class="check check2">兵</div>
+        </li>
+        <li class="col"></li>
+        <li class="col">
+          <div class="check check2">兵</div>
+        </li>
+        <li class="col">
+          <div class="check check2r">兵</div>
+        </li>
+      </ul>
+      <ul class="row">
+        <li class="col"></li>
+        <li class="col">
+          <div class="check check2">炮</div>
+        </li>
+        <li class="col"></li>
+        <li class="col"></li>
+        <li class="col"></li>
+        <li class="col"></li>
+        <li class="col"></li>
+        <li class="col">
+          <div class="check check2">炮</div>
+        </li>
+      </ul>
+      <ul class="row">
+        <li class="col"></li>
+        <li class="col"></li>
+        <li class="col"></li>
+        <li class="col"><div class="line1"></div></li>
+        <li class="col"></li>
+        <li class="col"><div class="line2"></div></li>
+        <li class="col"></li>
+        <li class="col"></li>
+      </ul>
+      <ul class="row">
+        <li class="col">
+          <div class="check check2">俥</div>
+        </li>
+        <li class="col">
+          <div class="check check2">傌</div>
+        </li>
+        <li class="col">
+          <div class="check check2">相</div>
+        </li>
+        <li class="col">
+          <div class="check check2">仕</div>
+        </li>
+        <li class="col">
+          <div class="check check2">帥</div>
+        </li>
+        <li class="col">
+          <div class="check check2">仕</div>
+        </li>
+        <li class="col">
+          <div class="check check2">相</div>
+        </li>
+        <li class="col">
+          <div class="check check2">傌</div>
+          <div class="check check2r">俥</div>
+        </li>
+      </ul>
+    </div>
+    <h1>圖畫裡，龍不吟，虎不嘯，小小書僮可笑可笑</h1>
+  </div>
+</body>
+
+</html>
